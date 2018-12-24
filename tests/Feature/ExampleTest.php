@@ -1,11 +1,7 @@
 <?php
 namespace Tests\Feature;
-
-use tests\Mockery\Adapter\Phpunit\EmptyTestCase;
 use Tests\TestCase;
-
 use Illuminate\Foundation\Testing\RefreshDatabase;
-
 class ExampleTest extends TestCase
 {
     /**
@@ -13,9 +9,15 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
-    public function testBasicTest()
+    public function testRegisterTest()
     {
         $response = $this->get('/register');
+        $response->assertStatus(200);
+    }
+
+    public function testLoginTest()
+    {
+        $response = $this->get('/login');
         $response->assertStatus(200);
     }
 }
