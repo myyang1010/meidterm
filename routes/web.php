@@ -13,7 +13,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 Auth::routes();
+
 Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('/contact', 'ContactController@contact')->name('contact');
+
 Route::post('/contact', 'ContactController@store')->name('contact.store');
-Route::get('/about', 'HomeController@about')->name('about');</html>
+
+Route::get('/about', 'HomeController@about')->name('about');
