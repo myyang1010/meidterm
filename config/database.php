@@ -1,5 +1,6 @@
 <?php
 
+
 return [
 
     /*
@@ -81,6 +82,7 @@ return [
             'prefix' => '',
             'prefix_indexes' => true,
         ],
+
 
     ],
 
